@@ -22,16 +22,20 @@ This project demonstrates the difference between synchronous and concurrent serv
    ### javac Server.java Client.java
 4. Run the server: java Server
 5. Run one or more clients(MultiThreaded): java Client
-## Project Structure 
-├── MultiThreaded
-│   ├── Server.java
-│   ├── Client.java
-│   └── ...
-├── SingleThreaded
-│   ├── Server.java
-│   ├── Client.java
-│   └── ...
-└── README.md
+
+## 📸 Screenshots
+
+### MUlti-threaded Server
+![Multi-threaded-Server](Server-Multi.png)
+
+### Multi-threaded Client
+![Multi-threaded-Client](Client-Multi.png)
+
+
+## 📂 Project Structure
+- `MultiThreaded/` → Contains Server & Client (multi-threaded)
+- `SingleThreaded/` → Contains Server & Client (single-threaded)
+- `README.md` → Documentation
 
 ## Key TakeAways
 - Hands-on experience with Java Networking (Socket, ServerSocket).
