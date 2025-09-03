@@ -38,13 +38,12 @@ public class Server {
     public static void main(String[] args) {
         int port = 8010;
         Server server = new Server();
-        try {
-            ServerSocket socket = new ServerSocket(port);
+        try (ServerSocket socket = new ServerSocket(port)) {
             socket.setSoTimeout(10000);
             System.out.println("Server is listening on port " + port);
             while (true) {
                 Socket acceptedSocket = socket.accept();
-                Thread thread = new Thread(()->{
+                Thread thread = new Thread(() -> {
                     server.getConsume().accept(acceptedSocket);
                 });
                 thread.start();
